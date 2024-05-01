@@ -1,0 +1,97 @@
+/*
+ * Bootstrap Cookie Alert by Wruczek
+ * https://github.com/Wruczek/Bootstrap-Cookie-Alert
+ * Released under MIT license
+ */
+.cookiealert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 !important;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 0;
+    transform: translateY(100%);
+    transition: all 500ms ease-out;
+    color: black;
+    font-size: 11px;
+    background: #ebebeb;
+    padding: 0.75rem 1.25rem;
+    transition-delay: 500ms;
+    z-index: -5;
+}
+.cookiealert-container{
+  display: grid;
+  max-width: 850px;
+  margin: 0 auto;
+  grid-template-columns: 87% 12%;
+}
+.cookiealert-container p{
+  margin: 0 auto;
+  font-size: 10.5px;
+}
+.cookiealert.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+    transition-delay: 500ms;
+    z-index: 999;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    width: 66%!important;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  button, select {
+    text-transform: none;
+  }
+  button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+  }
+  button, input {
+    overflow: visible;
+  }
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+  .btn-group-sm > .btn, .btn-sm {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: 0.4rem;
+    font-weight: 500;
+  }
+.btn-primary {
+    color: #fff;
+    background-color: #20b1d9;
+    border: 0;
+}
+.cookiealert a {
+    text-decoration: underline;
+    color: #20b1d9;
+}
+
+.cookiealert .acceptcookies {
+    margin-left: 10px;
+    vertical-align: baseline;
+}
+@media  only screen and (max-width: 420px){
+  .cookiealert {
+    width: auto;
+  }
+  .cookiealert-container{
+    max-width: 350px;
+    grid-template-columns: repeat(1,1fr);
+  }
+}
